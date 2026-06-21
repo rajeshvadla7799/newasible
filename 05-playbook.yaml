@@ -3,8 +3,8 @@
   become: true
   tasks:
     - name: Install apache httpd
-      ansible.builtin.yum:
-        name: apache2
+      ansible.builtin.dnf:
+        name: httpd
         state: present
         update_cache: yes
     - name: Copy file with owner and permissions
